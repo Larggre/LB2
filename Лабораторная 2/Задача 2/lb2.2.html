@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список</title>
+    <style>
+    *{
+        width: 400px;
+        margin-left: 20px;
+    }
+    span{
+        color: red;
+    }
+    h1{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .list {
+        list-style: none;
+        padding: 0;
+        background-color: #777;
+    }
+    .list li {
+        margin-bottom: 10px;
+        height: 30px;
+    }
+    .list input[type="checkbox"] {
+        display: none;
+    }
+    .list label {
+        position: relative;
+        padding-left: 30px;
+    }
+    .list label::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        background-image: url(img/1.png);
+        background-size: cover;
+    }
+    .list input[type="checkbox"]:checked + label::before {
+        background-image: url(img/2.png);
+    }
+
+    .list input[type="checkbox"]:checked + label {
+        text-decoration: line-through;
+        color: #777;
+        background-color: aqua;
+    }
+    </style>
+</head>
+<body>
+    <h1>My To Do List</h1>
+    <ul class="list">
+        <li>
+            <input type="checkbox" id="item1">
+            <label for="item1">Пункт списка 1</label> <span>&#10006;</span>
+        </li>
+        <li>
+            <input type="checkbox" id="item2">
+            <label for="item2">Пункт списка 2</label> <span>&#10006;</span>
+        </li>
+        <li>
+            <input type="checkbox" id="item3">
+            <label for="item3">Пункт списка 3</label> <span>&#10006;</span>
+        </li>
+        <li>
+            <input type="checkbox" id="item4">
+            <label for="item4">Пункт списка 4</label> <span>&#10006;</span>
+        </li>
+        <li>
+            <input type="checkbox" id="item5">
+            <label for="item5">Пункт списка 5</label> <span>&#10006;</span>
+        </li>
+        <li>
+            <input type="checkbox" id="item6">
+            <label for="item6">Пункт списка 6</label> <span>&#10006;</span>
+        </li>
+        <li>
+            <input type="checkbox" id="item7">
+            <label for="item7">Пункт списка 7</label> <span>&#10006;</span>
+        </li>
+        <li>
+            <input type="checkbox" id="item8">
+            <label for="item8">Пункт списка 8</label> <span>&#10006;</span>
+        </li>
+        <li>
+            <input type="checkbox" id="item9">
+            <label for="item9">Пункт списка 9</label> <span>&#10006;</span>
+        </li>
+    </ul>
+</body>
+</html>
